@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="xem_gia">
+<button onclick="xemGia()">Xem Giá</button>
+</body>
+</html>
+<script>
+    function xemGia() {
+        let xemGia = document.getElementById('xem_gia');
+        // xemGia.toLowerCase();
+        //GỌI toLowerCase --> Chuyển hết chữ hoa sang chữ thường -> Như vậy chúng ta chỉ cần so sánh với chữ thường là ra kết quả
+        //Lưu ý các trường hợp trùng giá thì loại bỏ break và alert trên 1 dòng để clean code.
+        console.log('xem gia => ', xemGia.value.toLowerCase())
+        switch (xemGia.value.toLowerCase()) {
+            case 'ổi':
+            case 'dưa hấu':
+                alert('20000')
+                break
+            case 'táo':
+            case 'xoài':
+                alert('30.000 VNĐ/kg')
+                break;
+            case 'cam':
+            case 'chôm chôm':
+                alert('40.000VNĐ/kg')
+                break;
+            case 'măng cụt':
+                alert('50.000VNĐ/kg')
+                break
+            default:
+                alert('Không bán loại hoa quả này!')
+
+        }
+    }
+</script>
